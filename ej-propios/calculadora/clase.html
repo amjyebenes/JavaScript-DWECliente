@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+    
+        <script>
+            class Animal{
+                constructor(especie,edad,color){
+                    this.especie=especie;
+                    this.edad=edad;
+                    this.color=color;
+                }
+                
+                mostrarInfo(){
+                    document.write(`Soy un ${this.especie} de ${this.edad} años de edad y de color ${this.color}<br>`);
+                }
+        
+            }
+
+            class Perro extends Animal{
+                constructor(especie,edad,color,raza){
+                    super(especie,edad,color);
+                    this.raza = raza;
+                }
+
+                mostrarInfo(){
+                    document.write(`Soy un ${this.especie} de ${this.edad} años de edad y de color ${this.color} y de raza ${this.raza}<br>`);
+                }
+
+                ladrar(){
+                    document.write(`guau...guau...<br>`);
+                }
+            }
+
+            class Tigre extends Animal{
+                constructor(especie,edad,color,raza){
+                    super(especie,edad,color);
+                    this.raza = raza;
+                }
+
+                mostrarInfo(){
+                    document.write(`Soy un tigre ${this.especie} de ${this.edad} años de edad y de color ${this.color}<br>`);
+                }
+
+                static rugir(){
+                    document.write(`grrr....grrrr...<br>`);
+                }
+
+                //set
+                set modificarPeso(peso){
+                    this.peso = peso;
+                }
+
+                //get 
+                get getRaza(){
+                    return this.raza;
+                }
+
+
+            }
+
+            const perro = new Animal("perro",14,"marron");
+            perro.mostrarInfo();
+
+            const chucho = new Perro("perro",5,"negro","pastor aleman");
+            chucho.mostrarInfo();
+
+            const tigre = new Tigre("de las nieves",4,"azul","grande");
+            Tigre.rugir();
+            tigre.mostrarInfo();
+            document.write(tigre.getRaza);
+
+        </script>
+
+    </body>
+</html>
