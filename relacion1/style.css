@@ -1,0 +1,16 @@
+body {
+    background-image: linear-gradient(to right, rgb(0, 205, 241), rgb(106, 248, 160));
+    height:300px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+  }
+div{
+    position:absolute;
+    height: 150px;
+    width: 300px;
+    background-color: white;
+    border-radius: 30px 30px 30px 30px;
+    margin: 0 auto;
+}
