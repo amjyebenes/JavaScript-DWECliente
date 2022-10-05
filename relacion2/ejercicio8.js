@@ -7,6 +7,7 @@ function mostrar(){
     if(cadena==cadena2){
         const resultado = document.createElement("H4");
         resultado.innerText="las cadenas son iguales";
-        document.body.append(resultado);
+        let parrafo = document.getElementsByTagName("p");
+        parrafo[0].textContent = resultado.textContent;
     }
 }
