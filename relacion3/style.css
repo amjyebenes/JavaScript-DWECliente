@@ -1,0 +1,21 @@
+body {
+    background-image: linear-gradient(to right, rgb(95, 168, 123), rgb(210, 240, 142));
+    height:300px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+  }
+div{
+    position:absolute;
+    height: 190px;
+    width: 300px;
+    background-color: rgb(104, 48, 48);
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: rgb(255, 255, 255);
+    margin: 0 auto;
+}
+h1{
+  color: white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
