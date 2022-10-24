@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+}
+
+section{
+    text-align: center;
+    margin-top: 10%;
+}
+
+.boton{
+    border-radius: 7%;
+    padding: 15px;
+    font-size: 24px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.botongrande{
+    border-radius: 7%;
+    padding: 15px;
+    font-size: 32px;
+}
+
+.boton:hover{
+    font-size:32px;
+}
+
+.movimiento{
+    transform: translate(20px,20px);
+    transition:0.5s;
+}
+
+.material-icons{
+    visibility: visible;
+    transition:0.5s;
+}
+
+.boton:hover i{
+    display: none;
+    transition:0.5;
+}
