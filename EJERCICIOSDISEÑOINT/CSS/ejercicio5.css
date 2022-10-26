@@ -1,0 +1,61 @@
+*{
+    box-sizing: border-box;
+}
+div{
+    border: 1px solid black;
+    display:flex;
+}
+body{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+.container{
+    width: 800px;
+}
+.row{
+    display:flex;
+    flex-direction: row;
+    flex:1;
+}
+
+.column{
+    display:flex;
+    flex-direction:column;
+    
+}
+
+.divImagen{
+    width: 400px;
+}
+.divPequeno{
+    width: 200px;
+}
+.imagen{
+    width: 100%;
+}
+
+.cCabecera{ background-color: crimson;}
+.cMenu{ background-color: rgb(88, 255, 213);}
+.cCompuesto{ background-color: rgb(115, 255, 73);}
+.cPie{ background-color: rgb(255, 139, 110);}
+
+@media only screen and (max-width: 800px) {
+    .row{
+        display:flex;
+        flex-direction:column;
+    }
+    div{
+        width: 100%;
+    }
+    .divImagen{
+        display:none;
+    }
+    img{
+        display:none;
+    }
+    .divPequeno{
+        width: 100%;
+    }
+}

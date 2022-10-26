@@ -1,0 +1,19 @@
+*{
+    box-sizing:border-box;
+}
+@media only screen and (min-width: 992px) {
+    body{
+        background-color: darksalmon;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    body{
+        background-color: rgb(126, 255, 133);
+    }
+}
+@media only screen and (max-width: 600px) {
+    body{
+        background-color: rgb(129, 168, 253);
+    }
+}

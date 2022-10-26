@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="ejercicio8.css" rel="stylesheet">
+    </head>
+    <body>
+            <ul class="topnav">
+                <li onclick="mostrar()"><a class="active" href="#home">Home</a></li>
+                <li class="esconder"><a href="#news">News</a></li>
+                <li class="esconder"><a href="#contact">Contact</a></li>
+                <li class="esconder"><a class="right" href="#about">About</a></li>
+            </ul>
+          <script>
+            function mostrar(){
+                let elementos = document.querySelectorAll("li");
+                elementos.forEach(a =>{
+                    a.classList.remove("esconder");
+                    a.classList.add("mostrar");
+                });
+                elementos = document.querySelector("ul");
+                elementos.classList.add("mostrar");
+            }
+          </script>
+    </body>
+</html>
+
