@@ -8,7 +8,7 @@
     </head>
     <body>
             <ul class="topnav">
-                <li onclick="mostrar()"><a class="active" href="#home">Home</a></li>
+                <li onclick="mostrar()" class="dejar"><a class="active" href="#home">Home</a></li>
                 <li class="esconder"><a href="#news">News</a></li>
                 <li class="esconder"><a href="#contact">Contact</a></li>
                 <li class="esconder"><a class="right" href="#about">About</a></li>
@@ -17,11 +17,13 @@
             function mostrar(){
                 let elementos = document.querySelectorAll("li");
                 elementos.forEach(a =>{
-                    a.classList.remove("esconder");
-                    a.classList.add("mostrar");
+                    if(a.classList.contains("esconder")){
+                        a.classList.remove("esconder");
+                    }else{
+                        a.classList.add("esconder");
+                    }
                 });
-                elementos = document.querySelector("ul");
-                elementos.classList.add("mostrar");
+                
             }
           </script>
     </body>

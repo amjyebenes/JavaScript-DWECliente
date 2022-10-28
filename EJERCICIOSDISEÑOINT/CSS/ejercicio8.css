@@ -28,9 +28,9 @@ ul.topnav li a.active {background-color: #04AA6D;}
 ul.topnav li.right {float: right;}
 
 @media screen and (max-width: 992px) {
-  
-  .esconder{
-    display:none;
-  }
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+  .esconder{display:none;}
+  .dejar{display:block;}
 }
-.mostrar{float: none;}
+
