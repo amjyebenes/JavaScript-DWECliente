@@ -63,7 +63,7 @@ function insertarBarco(barco, tablero) {
         let despX = dirX[dirActual];
         let despY = dirY[dirActual];
 
-        if (!sonAdyacentesLibres(conseguirAdyacentes(rndX + despX, rndY + despY, tablero))) { // [0] pq me quedo con el valor de los adyacentes
+        if (!sonAdyacentesValidos(rndX + despX, rndY + despY, tablero)) { // [0] pq me quedo con el valor de los adyacentes
             i = 0;
             dirActual = dir();
         } else if (i == tamaño - 1) {
@@ -73,11 +73,13 @@ function insertarBarco(barco, tablero) {
 
     if (huecoSuficiente) {
         for (let i = 1; i < tamaño; i++) {
-            posicionesADibujar.push(new Array(rndX + i, rndY + i));
+            posicionesADibujar.push(new Array(rndX + dirX[dirActual], rndY + dirY[dirActual]));
         }
         for (let i = 0; i < posicionesADibujar.length; i++) {
-            console.log(simbolo);
-            tablero[posicionesADibujar[i][0]][posicionesADibujar[i][1]] = simbolo;
+            let x = posicionesADibujar[i][0];
+            let y = posicionesADibujar[i][1];
+            tablero[x][y] = simbolo;
+            dibujarUnosAlrededor(x,y,posicionesADibujar,tablero);
         }
 
     } else {
@@ -88,7 +90,24 @@ function insertarBarco(barco, tablero) {
 
 }
 
-function sonAdyacentesLibres(adyacentes) {
+function dibujarUnosAlrededor(x,y,posicionesADibujar,tablero) {
+    if(posicionValida(x,y,tablero) && !perteneceAPosicionesDibujar(x,y,posicionesADibujar)){
+        tablero[x][y] = "1";
+    }
+}
+
+function perteneceAPosicionesDibujar(x,y,posicionesADibujar){
+    let posible = true;
+    for (let i = 0; i < posicionesADibujar.length; i++) {
+        if(posicionesADibujar[i][0]==x && posicionesADibujar[i][1] == y){
+            posible = false;
+        }
+    }
+    return posible;
+}
+
+
+/*function sonAdyacentesLibres(adyacentes) {
     let libres = true;
     let ocupadas = new Array("1","F","P","B","A");
     for (let i = 0; i < adyacentes.length; i++) {
@@ -97,23 +116,27 @@ function sonAdyacentesLibres(adyacentes) {
         }
     }
     return libres;
-}
+}*/
 
-function conseguirAdyacentes(x, y, tablero) {
-    let adyacentes = new Array();
-    for (let i = 0; i < 8; i++) {
-        if (posicionValida(x, y, tablero)) {
-            adyacentes = tablero[x][y];
+function sonAdyacentesValidos(x, y, tablero) {
+    let libres = true;
+    let dirX = new Array(1, -1, 0, 0, 1, 1,-1,-1);
+    let dirY = new Array(0, 0, 1, -1, 1,-1, 1,-1);
+    for (let i = 0; i < 16; i++) {
+        if (posicionValida(x+dirX[i], y+dirY[i], tablero)) {
+           libres = false;
         }
     }
 
-    return adyacentes;
+    return libres;
 }
 
-posicionValida = (x, y, tablero) => x >= 0 && y >= 0 && x < tablero.length && y < tablero.length;
+let posicionValida = (x, y, tablero) => x >= 0 && y >= 0 && x < 10 && y < 10 && !["1","F","P","B","A"].includes(tablero[x][y]);
 
 function ejecutar() {
     let tablero = crearTablero();
+    console.log(tablero);
+    console.log(insertarBarco("acorazado", tablero));
     tablero = insertarBarco("fragata", insertarBarco("portaaviones", insertarBarco("buque", insertarBarco("acorazado", tablero))));
     mostrarTablero(tablero);
 
