@@ -53,10 +53,13 @@ class Password{
         let contrasenaEncriptada = "";
         for (let index = 0; index < this.getContrasena.length; index++) {
             let caracter = this.getContrasena.charAt(index).charCodeAt(0);
+            //console.log(caracter)
             if(caracter >= 48 && caracter <= 57){
-                contrasenaEncriptada+=String.fromCharCode(caracter+97);
+                caracter+=97;
+                contrasenaEncriptada = contrasenaEncriptada.concat(String.fromCharCode(caracter+97));
             }else if(caracter >= 65 && caracter <= 122){
-                contrasenaEncriptada+=String.fromCharCode(((caracter % 5 ) + 5 ) %5).toString();
+                caracter = (((caracter%5)+5)%5);
+                contrasenaEncriptada = contrasenaEncriptada.concat(caracter.toString());
             }
             
         }
