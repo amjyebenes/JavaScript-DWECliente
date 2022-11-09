@@ -131,12 +131,14 @@ function sonAdyacentesValidos(x, y, tablero) {
     return libres;
 }
 
-let posicionValida = (x, y, tablero) => x >= 0 && y >= 0 && x < 10 && y < 10 && !["1","F","P","B","A"].includes(tablero[x][y]);
+let posicionValida = (x, y, tablero) => x >= 0 && y >= 0 && x < 10 && y < 10 && !("1","F","P","B","A").includes(tablero[x][y]);
 
 function ejecutar() {
     let tablero = crearTablero();
+    mostrarTablero(tablero);
     console.log(tablero);
     console.log(insertarBarco("acorazado", tablero));
+    mostrarTablero(tablero);
     tablero = insertarBarco("fragata", insertarBarco("portaaviones", insertarBarco("buque", insertarBarco("acorazado", tablero))));
     mostrarTablero(tablero);
 
