@@ -53,11 +53,10 @@ function insertarBarco(barco, tablero) {
         //0 derecha 1 izquierda 2 arriba 3 abajo
         // el acorazado ocupa 3
 
-
-        let huecoSuficiente = false;
-
         let dirActual = dir();
         let posicionesADibujar = new Array();
+
+        
         
 
     }
