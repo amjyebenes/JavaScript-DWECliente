@@ -1,43 +1,33 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Title</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
-
-        <div class="container-mt-3">
-            <ul style="list-style: none;">
-                <li><a href="#" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<img src='rana.webp'><p>08/10/1997</p>">Amy</a></li><br>
-                <li><a href="#" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<img src='gato1.jpg'><p>14/11/1994</p>">Lzzy</a></li><br>
-                <li><a href="#" data-bs-html="true" data-bs-toggle="tooltip" data-bs-placement="top" title="<img src='gato2.jpg'><p>20/12/1997</p>">Taylor</a></li><br>
-            </ul>
+<body>
+    <div class="container-fluid">
+        <div class="justify-content-center">
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-html="true" title="<img src='gato1.jpg' width='50px'><p>12/11/2001</p>">Persona 1</li>
+                      <li class="list-group-item" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-html="true" title="<img src='gato2.jpg' width='50px'><p>12/11/2020</p>">Persona 2</li>
+                      <li class="list-group-item" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-html="true" title="<img src='gato3.jpg' width='50px'><p>11/02/2012</p>">Persona 3</li>
+                      <li class="list-group-item" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-html="true" title="<img src='rana.webp' width='50px'><p>12/11/2004</p>">Persona 4</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-
-
-        <script>
-            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-              return new bootstrap.Tooltip(tooltipTriggerEl)
-            })
-        </script>
-
-
-  <!-- Bootstrap JavaScript Libraries -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
-  </script>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
-    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
-  </script>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+    </script>
 </body>
-
 </html>
