@@ -24,25 +24,27 @@ function mostrarTablero(tablero) {
 
 const dirX = new Array(1, -1, 0, 0, 1, 1, -1, -1);
 const dirY = new Array(0, 0, 1, -1, 1, -1, 1, -1);
+const ocupados = new Array("1", "F", "P", "B", "A");
+const barcos = new Array("F", "P", "B", "A");
 
 function insertarBarco(barco, tablero) {
     if (tablero != null) {
         let tamaño, simbolo;
         switch (barco) {
             case "portaaviones":
-                tamaño = 5;
+                tamaño = 4;
                 simbolo = "P";
                 break;
             case "fragata":
-                tamaño = 2;
+                tamaño = 1;
                 simbolo = "F";
                 break;
             case "buque":
-                tamaño = 3;
+                tamaño = 2;
                 simbolo = "B";
                 break;
             case "acorazado":
-                tamaño = 4;
+                tamaño = 3;
                 simbolo = "A";
                 break;
         }
@@ -56,17 +58,87 @@ function insertarBarco(barco, tablero) {
         let dirActual = dir();
         let posicionesADibujar = new Array();
 
-        
-        
+        let intentos = 0;
+        let buenaPosicion = false;
+        let direccionesIntentadas = new Array();
 
+        while (!buenaPosicion || intentos < 10) {
+            intentos++;
+            if (tablero[rndX][rndY] != "0" && sonAdyacentesValidos(rndX, rndY, tablero)) {
+                posicionesADibujar.push(new Array(rndX, rndY));
+                buenaPosicion = true;
+            } else {
+                rndX = Math.round(Math.random() * 9);
+                rndY = Math.round(Math.random() * 9);
+            }
+
+            if (buenaPosicion) {
+                let acierto = false;
+                intentos = 1;
+                while (!acierto || intentos < 4) {
+                    let despX = dirX[dirActual];
+                    let despY = dirY[dirActual];
+                    let x = rndX;
+                    let y = rndY;
+                    let parar = false;
+                    let haCabido = 0;
+                    while (!parar || haCabido < tamaño) {
+                        if (tablero[x][y] != "1" && sonAdyacentesValidos(x, y, tablero)) {
+                            posicionesADibujar.push(new Array(x, y));
+                            x += despX;
+                            y += despY;
+                        } else {
+                            parar = true;
+                        }
+                    }
+                    if (parar) {
+                        let nueva = false;
+                        let nuevasDir = 0;
+                        while (!nueva || nuevasDir < 4) {
+                            dirActual = dir();
+                            if (direccionesIntentadas.includes(dirActual)) {
+                                dirActual = dir();
+                            } else {
+                                direccionesIntentadas.push(dirActual);
+                                nueva = true;
+                            }
+                            nuevasDir++;
+                        }
+                        intentos++;
+                    } else {
+                        acierto = true;
+                    }
+                }
+                if(!acierto){
+                    direccionesIntentadas = new Array();
+                    posicionesADibujar = new Array();
+                }
+            }
+        }
+// AQUI TENGO QUE SEGUIR CON QUE LAS POSICIONES A DIBUJAR SE DIBUJEN Y SE DIBUJEN LOS 1 TAMBIEN 
     }
-        
+
     return tablero;
 
 }
 
+function sonAdyacentesValidos(x, y, tablero) {
+    let libres = true;
+    let dirX = new Array(1, -1, 0, 0, 1, 1, -1, -1);
+    let dirY = new Array(0, 0, 1, -1, 1, -1, 1, -1);
+    for (let i = 0; i < 8; i++) {
+        let posX = dirX[i] + x;
+        let posY = dirY[i] + y;
+        if (!posicionValida(posX, posY, tablero)) {
+            libres = false;
+        }
+    }
 
-let ocupados = new Array("1", "F", "P", "B", "A");
+    return libres;
+}
+
+
+
 
 let posicionValida = (x, y, tablero) => x >= 0 && y >= 0 && x < 10 && y < 10 && !ocupados.includes(tablero[x][y]);
 

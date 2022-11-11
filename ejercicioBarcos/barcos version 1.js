@@ -14,7 +14,29 @@ function mostrarTablero(tablero) {
     for (let i = 0; i < 10; i++) {
         document.write("<tr>");
         for (let j = 0; j < 10; j++) {
-            document.write("<td>&nbsp;&nbsp;" + tablero[i][j] + " &nbsp;</td>");
+            let img;
+            switch (tablero[i][j]) {
+                case "F":
+                    img = '<img style="width:50px" src="fragata.jpg">';
+                    break;
+                case "B":
+                    img = '<img style="width:50px" src="buque.jpg">';
+                    break;
+                case "A":
+                    img = '<img style="width:50px" src="acorazado.jpg">';
+                    break;
+                case "P":
+                    img = '<img style="width:50px" src="portaaviones.jpg">';
+                    break;
+                default:
+                    img = "&nbsp";
+                    break;
+            }
+            if (img != "&nbsp") {
+                document.write("<td>" + img + "</td>");
+            } else {
+                document.write("<td><br>&nbsp;&nbsp;&nbsp;&nbsp;" + img + "&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;</td>");
+            }
         }
         document.write("</tr>");
     }
@@ -27,19 +49,19 @@ function insertarBarco(barco, tablero) {
         let tamaño, simbolo;
         switch (barco) {
             case "portaaviones":
-                tamaño = 5;
+                tamaño = 4;
                 simbolo = "P";
                 break;
             case "fragata":
-                tamaño = 2;
+                tamaño = 1;
                 simbolo = "F";
                 break;
             case "buque":
-                tamaño = 3;
+                tamaño = 2;
                 simbolo = "B";
                 break;
             case "acorazado":
-                tamaño = 4;
+                tamaño = 3;
                 simbolo = "A";
                 break;
         }
@@ -65,7 +87,7 @@ function insertarBarco(barco, tablero) {
         localizacionesIntentadas.push(new Array(rndX, rndY));
         let seguir = true;
 
-        for (let i = 0; i < tamaño && seguir; i++) {
+        for (let i = 0; i < tamaño; i++) {
             let despX = dirX[dirActual];
             let despY = dirY[dirActual];
             let x = rndX + despX;
@@ -80,27 +102,6 @@ function insertarBarco(barco, tablero) {
                         direccionesIntentadas.push(dirActual);
                     }
                 }
-
-                if (direccionesIntentadas.length == 4) {
-
-                    rndX = Math.round(Math.random() * 9);
-                    rndY = Math.round(Math.random() * 9);
-                    let localizacion = new Array(rndX, rndY);
-                    localizacionesIntentadas.push(new Array(rndX, rndY));
-                    while (localizacionesIntentadas.includes(localizacion) && localizacionesIntentadas.length < 20) {
-                        if (localizacionesIntentadas.includes(localizacion)) {
-                            rndX = Math.round(Math.random() * 9);
-                            rndY = Math.round(Math.random() * 9);
-                            localizacion = new Array(rndX, rndY);
-                        } else {
-                            localizacionesIntentadas.push(localizacion);
-                        }
-                    }
-                    if (localizacionesIntentadas.length == 20) {
-                        seguir = false;
-                    }
-                }
-
 
             } else {
                 posicionesADibujar.push(new Array(rndX, rndY));
@@ -161,7 +162,7 @@ function sonAdyacentesValidos(x, y, tablero) {
     let libres = true;
     let dirX = new Array(1, -1, 0, 0, 1, 1, -1, -1);
     let dirY = new Array(0, 0, 1, -1, 1, -1, 1, -1);
-    for (let i = 0; i < 16; i++) {
+    for (let i = 0; i < 8; i++) {
         let posX = dirX[i] + x;
         let posY = dirY[i] + y;
         if (!posicionValida(posX, posY, tablero)) {
@@ -172,13 +173,21 @@ function sonAdyacentesValidos(x, y, tablero) {
     return libres;
 }
 
-let ocupados = new Array("1", "F", "P", "B", "A");
+let ocupados = new Array("F", "P", "B", "A");
 
 let posicionValida = (x, y, tablero) => x >= 0 && y >= 0 && x < 10 && y < 10 && !ocupados.includes(tablero[x][y]);
 
 function ejecutar() {
     let tablero = crearTablero();
-    tablero = insertarBarco("fragata", insertarBarco("portaaviones", insertarBarco("buque", insertarBarco("acorazado", tablero))));
+    tablero = insertarBarco("fragata", tablero);
+    tablero = insertarBarco("portaaviones", tablero);
+    tablero = insertarBarco("buque", tablero);
+    
+    tablero = insertarBarco("fragata", tablero);
+    tablero = insertarBarco("portaaviones", tablero);
+    tablero = insertarBarco("buque", tablero);
+    
+    insertarBarco("acorazado", tablero);
     mostrarTablero(tablero);
 
 }
