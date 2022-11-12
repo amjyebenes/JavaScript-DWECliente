@@ -71,7 +71,7 @@ function insertarBarco(barco, tablero) {
                 rndX = Math.round(Math.random() * 9);
                 rndY = Math.round(Math.random() * 9);
             }
-
+       
             if (buenaPosicion) {
                 let acierto = false;
                 intentos = 1;
@@ -87,6 +87,7 @@ function insertarBarco(barco, tablero) {
                             posicionesADibujar.push(new Array(x, y));
                             x += despX;
                             y += despY;
+                            haCabido++;
                         } else {
                             parar = true;
                         }
@@ -109,13 +110,13 @@ function insertarBarco(barco, tablero) {
                         acierto = true;
                     }
                 }
-                if(!acierto){
+                if (!acierto) {
                     direccionesIntentadas = new Array();
                     posicionesADibujar = new Array();
                 }
             }
         }
-// AQUI TENGO QUE SEGUIR CON QUE LAS POSICIONES A DIBUJAR SE DIBUJEN Y SE DIBUJEN LOS 1 TAMBIEN 
+        // AQUI TENGO QUE SEGUIR CON QUE LAS POSICIONES A DIBUJAR SE DIBUJEN Y SE DIBUJEN LOS 1 TAMBIEN 
     }
 
     return tablero;
@@ -140,7 +141,7 @@ function sonAdyacentesValidos(x, y, tablero) {
 
 
 
-let posicionValida = (x, y, tablero) => x >= 0 && y >= 0 && x < 10 && y < 10 && !ocupados.includes(tablero[x][y]);
+let posicionValida = (x, y, tablero) => x >= 0 && y >= 0 && x < 10 && y < 10 && !barcos.includes(tablero[x][y]);
 
 function ejecutar() {
     let tablero = crearTablero();
