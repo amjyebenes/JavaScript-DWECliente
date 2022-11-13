@@ -41,6 +41,7 @@ function mostrarTablero(tablero) {
         document.write("</tr>");
     }
     document.write("</table>");
+    tablero = new Array();
 }
 
 
