@@ -188,6 +188,7 @@ function ejecutar() {
     tablero = insertarBarco("portaaviones", tablero);
     tablero = insertarBarco("buque", tablero);
     
+    
     insertarBarco("acorazado", tablero);
     mostrarTablero(tablero);
 
