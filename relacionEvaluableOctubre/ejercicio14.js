@@ -64,49 +64,27 @@ class Pelicula{
     
 
     fichaTecnica(){
-        let p = document.createElement("p");
-        let id = document.createTextNode("id: "+ this.getId);
-        let titulo = document.createTextNode("titulo: "+ this.getTitulo);
-        let director = document.createTextNode("director: "+ this.getDirector);
-        let ano = document.createTextNode("ano: "+ this.getAno);
-        let calificacion = document.createTextNode("calificacion: "+ this.getCalificacion);
-        let pais = document.createTextNode("pais: "+ this.getPais);
-        let genero = document.createTextNode("genero: "+ this.getGenero);
-        let salto = document.createElement("br");
-        let salto2 = document.createElement("br");
-        let salto3 = document.createElement("br");
-        let salto4 = document.createElement("br");
-        let salto5 = document.createElement("br");
-        let salto6 = document.createElement("br");
-
-        p.appendChild(id);
-        p.appendChild(salto);
-        p.appendChild(titulo);
-        p.appendChild(salto2);
-        p.appendChild(director);
-        p.appendChild(salto3);
-        p.appendChild(ano);
-        p.appendChild(salto4);
-        p.appendChild(calificacion);
-        p.appendChild(salto5);
-        p.appendChild(pais);
-        p.appendChild(salto6);
-        p.appendChild(genero);
-        document.body.appendChild(p);
-
+        document.write("<br>id: "+ this.getId + "<br>");
+        document.write("titulo: "+ this.getTitulo + "<br>");
+        document.write("director: "+ this.getDirector + "<br>");
+        document.write("ano: "+ this.getAno + "<br>");
+        document.write("calificacion: "+ this.getCalificacion + "<br>");
+        document.write("pais: "+ this.getPais + "<br>");
+        document.write("genero: "+ this.getGenero + "<br>");
+        document.write("===============<br>");
     }
 }
 
 function mostrarPeliculas(){
-    let peli1 = new Pelicula("ab1111111","pelicula","director1","1999","españa","Action","+16");
-    let peli2 = new Pelicula("ab1234565","pelicula","director3","1990","españa","Fantasy","+16");
-    let peli3 = new Pelicula("ab1234564","pelicula","director3","1991","españa","Mystery","+16");
-
-    document.write(peli1.fichaTecnica());
-    document.write("===============");
-    document.write(peli2.fichaTecnica());
-    document.write("===============");
-    document.write(peli3.fichaTecnica());
+    let peliculas = [["ab1111111","pelicula","director1","1999","españa","Action","+16"],
+                    ["ab1234565","pelicula","director3","1990","españa","Fantasy","+16"],
+                    ["ab1234564","pelicula","director3","1991","españa","Mystery","+16"]]
+    let pelis = new Array();
+    for (let i = 0; i < peliculas.length; i++) {
+        let peli = new Pelicula(peliculas[i][0],peliculas[i][1],peliculas[i][2],peliculas[i][3],
+                                peliculas[i][4],peliculas[i][5],peliculas[i][6]);
+        document.write(peli.fichaTecnica());
+    }
 }
 
 document.addEventListener("load",mostrarPeliculas());
