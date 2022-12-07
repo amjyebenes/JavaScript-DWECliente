@@ -1,31 +1,27 @@
-function generarListaYboton(){
-    let lista = Array("hola","jueves","adios","madrid","ok","miercoles","z","j","1","tierra");
-    for (let index = 0; index < lista.length; index++) {
+function generarParrafosyBoton(){
+    for (let index = 0; index < 5; index++) {
         let p = document.createElement("p")
-        let texto = document.createTextNode(lista[index]);
+        let texto = document.createTextNode(index+1 + " parrafo");
         p.appendChild(texto);
         document.body.appendChild(p);
     }
     let boton = document.createElement("input");
-    boton.value="Ordenar";
+    boton.value="Invertir";
     boton.type="submit";
-    boton.id="boton";
     boton.onclick= function(){
         let parrafos = document.querySelectorAll("p");
         let aux = new Array();
         parrafos.forEach(element => {
-            aux.push(element.innerText);
-            element.remove();
+            aux.push(element);
         });
-        let p2 = aux.sort();
-
-        for (let index = 0; index < p2.length; index++) {
-            let p = document.createElement("p")
-            let texto = document.createTextNode(aux[index]);
-            p.appendChild(texto);
-            document.querySelector("#boton").insertAdjacentElement("beforebegin",p);
-        }
+    
+        let parrafosInvertidos = aux.reverse();
+        parrafosInvertidos.forEach(element => {
+            document.body.appendChild(element);
+        });
+    
     }
     document.body.appendChild(boton);
 }
-document.addEventListener("load",generarListaYboton());
+document.addEventListener("load",generarParrafosyBoton());
+

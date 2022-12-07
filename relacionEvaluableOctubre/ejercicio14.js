@@ -1,90 +1,47 @@
-class Pelicula{
-    constructor(id, titulo, director, ano, pais, genero, calificacion){
+let lista = ["texto 1","texto 2","texto 3","texto 4","texto 5"];
+lista.forEach(element => {
+    let p = document.createElement("p");
+    let t = document.createTextNode(element);
+    p.appendChild(t);
+    document.body.appendChild(p);
+});
+
+let campotexto = document.createElement("input");
+let boton = document.createElement("input");
+let indice = document.createElement("input");
+
+campotexto.id = "campotexto";
+campotexto.type="text";
+campotexto.placeholder = "texto a introducir";
+
+indice.id = "indice";
+indice.type="text";
+indice.placeholder = "indice";
+
+boton.value="introducir";
+boton.type="submit";
+boton.id="boton";
+
+boton.onclick=function(){
+    console.log("aoinasd")
+    let parrafos = document.querySelectorAll("p");
+    let pNuevo = document.createElement("p");
+    let t = document.createTextNode(document.getElementById("campotexto").value);
+    pNuevo.appendChild(t);
+    console.log(pNuevo);
+    let aux = parrafos;
+    parrafos.forEach(element => {
+        element.remove();
+    });
+    for (let index = 0; index < parrafos.length; index++) {
+        if(index==document.getElementById("indice").value-1){
+           document.body.appendChild(pNuevo); 
+        }
+        document.body.appendChild(aux[index]);
         
-        if((/^[a-zA-Z]{2}\d{7}$/.test(id))){
-            this.id=id;
-        }else alert("error al introducir el id " + id);
-
-        if((/^[a-zA-Z]{1,100}$/.test(titulo))){
-            this.titulo = titulo;
-        }else alert("error al introducir el titulo " + titulo);
-
-        this.director = director;
-        
-        if((/^\d{4}$/.test(ano))){
-            this.ano = ano;
-        }else alert("error al introducir el ano " + ano);
-
-        if(typeof pais == "string"){
-            this.pais = pais;
-        }else alert("error al introducir el pais " + pais);
-
-        if(this.generos().includes(genero)){
-            this.genero = genero;
-        }else alert("error al introducir el genero " + genero);
-        
-        this.calificacion = calificacion;
-    }
-
-    get getId(){
-        return this.id;
-    }
-
-    get getTitulo(){
-        return this.titulo;
-    }
-
-    get getDirector(){
-        return this.director;
-    }
-
-    get getAno(){
-        return this.ano;
-    }
-
-    get getPais(){
-        return this.pais;
-    }
-
-    get getGenero(){
-        return this.genero;
-    }
-
-    get getCalificacion(){
-        return this.calificacion;
-    }
-
-    generos(){
-        return ["Action", "Adult", "Adventure", "Animation", 
-        "Biography", "Comedy", "Crime", "Documentary" ,"Drama", "Family", 
-        "Fantasy", "Film Noir", "Game-Show", "History", "Horror", "Musical", 
-        "Music", "Mystery", "News", "Reality-TV", "Romance", "Sci-Fi", "Short", 
-        "Sport", "Talk-Show", "Thriller", "War", "Western"];
-    }
-    
-
-    fichaTecnica(){
-        document.write("<br>id: "+ this.getId + "<br>");
-        document.write("titulo: "+ this.getTitulo + "<br>");
-        document.write("director: "+ this.getDirector + "<br>");
-        document.write("ano: "+ this.getAno + "<br>");
-        document.write("calificacion: "+ this.getCalificacion + "<br>");
-        document.write("pais: "+ this.getPais + "<br>");
-        document.write("genero: "+ this.getGenero + "<br>");
-        document.write("===============<br>");
     }
 }
 
-function mostrarPeliculas(){
-    let peliculas = [["ab1111111","pelicula","director1","1999","españa","Action","+16"],
-                    ["ab1234565","pelicula","director3","1990","españa","Fantasy","+16"],
-                    ["ab1234564","pelicula","director3","1991","españa","Mystery","+16"]]
-    let pelis = new Array();
-    for (let i = 0; i < peliculas.length; i++) {
-        let peli = new Pelicula(peliculas[i][0],peliculas[i][1],peliculas[i][2],peliculas[i][3],
-                                peliculas[i][4],peliculas[i][5],peliculas[i][6]);
-        document.write(peli.fichaTecnica());
-    }
-}
-
-document.addEventListener("load",mostrarPeliculas());
+document.body.appendChild(indice);
+document.body.appendChild(campotexto);
+document.body.appendChild(boton);

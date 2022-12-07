@@ -1,47 +1,58 @@
-let lista = ["texto 1","texto 2","texto 3","texto 4","texto 5"];
-lista.forEach(element => {
+let p1 = document.createElement("p");
+let p2 = document.createElement("p");
+
+let texto = document.createTextNode("TEXTO PARRAFO 1");
+let texto2 = document.createTextNode("TEXTO PARRAFO 2");
+
+p1.appendChild(texto);
+p2.appendChild(texto2);
+
+document.body.appendChild(p1);
+document.body.appendChild(p2);
+
+let insertar = document.createElement("input");
+let borrar = document.createElement("input");
+let modificar = document.createElement("input");
+
+let indiceParrafosModificar = document.createElement("input");
+
+insertar.type = "submit";
+insertar.value = "insertar parrafo";
+insertar.id = "insertar";
+borrar.type = "submit";
+borrar.value = "borrar parrafo";
+borrar.id = "borrar";
+modificar.type = "submit";
+modificar.value = "modificar parrafo";
+modificar.id = "modificar";
+
+indiceParrafosModificar.type="text";
+indiceParrafosModificar.value="";
+indiceParrafosModificar.id="indiceParrafoModificar";
+
+insertar.onclick=function(){
     let p = document.createElement("p");
-    let t = document.createTextNode(element);
-    p.appendChild(t);
-    document.body.appendChild(p);
-});
-
-let campotexto = document.createElement("input");
-let boton = document.createElement("input");
-let indice = document.createElement("input");
-
-campotexto.id = "campotexto";
-campotexto.type="text";
-campotexto.placeholder = "texto a introducir";
-
-indice.id = "indice";
-indice.type="text";
-indice.placeholder = "indice";
-
-boton.value="introducir";
-boton.type="submit";
-boton.id="boton";
-
-boton.onclick=function(){
-    console.log("aoinasd")
+    let t = document.createTextNode(prompt("Introduce el texto del parrafo nuevo: "));
     let parrafos = document.querySelectorAll("p");
-    let pNuevo = document.createElement("p");
-    let t = document.createTextNode(document.getElementById("campotexto").value);
-    pNuevo.appendChild(t);
-    console.log(pNuevo);
-    let aux = parrafos;
-    parrafos.forEach(element => {
-        element.remove();
-    });
-    for (let index = 0; index < parrafos.length; index++) {
-        if(index==document.getElementById("indice").value-1){
-           document.body.appendChild(pNuevo); 
-        }
-        document.body.appendChild(aux[index]);
-        
-    }
+    p.tagName="nuevoP";
+    p.appendChild(t);
+    //document.body.insertAdjacentText("beforebegin",parrafos[parrafos.length-1]).appendChild();
+    document.body.appendChild(p);
 }
 
-document.body.appendChild(indice);
-document.body.appendChild(campotexto);
-document.body.appendChild(boton);
+borrar.onclick=function(){
+    let parrafos = document.querySelectorAll("p");
+    parrafos[parrafos.length-1].remove();
+}
+
+modificar.onclick=function(){
+    let indice = document.getElementById("indiceParrafoModificar").value;
+    let parrafos = document.querySelectorAll("p");
+    parrafos[indice-1].textContent = prompt("Modifica el parrafo: ");
+}
+
+document.body.appendChild(insertar);
+document.body.appendChild(borrar);
+document.write("<br>");
+document.body.appendChild(indiceParrafosModificar);
+document.body.appendChild(modificar);

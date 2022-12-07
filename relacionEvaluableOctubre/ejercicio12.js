@@ -1,58 +1,18 @@
-let p1 = document.createElement("p");
-let p2 = document.createElement("p");
+let parrafo = document.createElement("p");
+parrafo.appendChild(document.createTextNode("buenas tardes que tal estais este seria el enlace -> "));
+let enlace = document.createElement("a");
+enlace.href="http://www.marca.es";
+enlace.innerText="periodico";
+parrafo.appendChild(enlace);
+document.body.appendChild(parrafo);
 
-let texto = document.createTextNode("TEXTO PARRAFO 1");
-let texto2 = document.createTextNode("TEXTO PARRAFO 2");
 
-p1.appendChild(texto);
-p2.appendChild(texto2);
-
-document.body.appendChild(p1);
-document.body.appendChild(p2);
-
-let insertar = document.createElement("input");
-let borrar = document.createElement("input");
-let modificar = document.createElement("input");
-
-let indiceParrafosModificar = document.createElement("input");
-
-insertar.type = "submit";
-insertar.value = "insertar parrafo";
-insertar.id = "insertar";
-borrar.type = "submit";
-borrar.value = "borrar parrafo";
-borrar.id = "borrar";
-modificar.type = "submit";
-modificar.value = "modificar parrafo";
-modificar.id = "modificar";
-
-indiceParrafosModificar.type="text";
-indiceParrafosModificar.value="";
-indiceParrafosModificar.id="indiceParrafoModificar";
-
-insertar.onclick=function(){
-    let p = document.createElement("p");
-    let t = document.createTextNode(prompt("Introduce el texto del parrafo nuevo: "));
-    let parrafos = document.querySelectorAll("p");
-    p.tagName="nuevoP";
-    p.appendChild(t);
-    //document.body.insertAdjacentText("beforebegin",parrafos[parrafos.length-1]).appendChild();
-    document.body.appendChild(p);
+let boton = document.createElement("input");
+boton.value = "Cambiar periodico";
+boton.id="boton";
+boton.type="submit";
+boton.onclick= function(){
+    let enlace = document.querySelector("p a");
+    enlace.href = "http://www.as.com";
 }
-
-borrar.onclick=function(){
-    let parrafos = document.querySelectorAll("p");
-    parrafos[parrafos.length-1].remove();
-}
-
-modificar.onclick=function(){
-    let indice = document.getElementById("indiceParrafoModificar").value;
-    let parrafos = document.querySelectorAll("p");
-    parrafos[indice-1].textContent = prompt("Modifica el parrafo: ");
-}
-
-document.body.appendChild(insertar);
-document.body.appendChild(borrar);
-document.write("<br>");
-document.body.appendChild(indiceParrafosModificar);
-document.body.appendChild(modificar);
+document.body.appendChild(boton);
