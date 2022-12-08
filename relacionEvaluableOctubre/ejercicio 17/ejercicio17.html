@@ -13,15 +13,17 @@
 
 </head>
 
-<body >
+<body class="p-5">
         <h1>BIENVENIDO AL SISTEMA COMARES</h1>
         <p>
-            Introduzca su usuario y clave...
+          Introduzca su usuario y clave...
         </p>
-        <label>usuario: </label> <input type="text" name="usuario"><br>
-        <label>clave: </label><input type="password" name="clave"><br>
-        <input type="submit" name="enviar" value="Enviar" onclick="">
-        <input type="submit" name="limpiar" value="Limpiar">
+        <form name="form1" id="form1" >
+          <label>usuario: </label> <input type="text" name="usuario" id="usuario"><br>
+          <label>clave: </label><input type="password" name="clave" id="contrasena"><br>
+          <input type="submit" name="enviar" value="Enviar" onclick="comprobarCampos()">
+          <input type="submit" name="limpiar" value="Limpiar">
+        </form>
         
         <script src="ejercicio17.js"></script>
   <!-- Bootstrap JavaScript Libraries -->
