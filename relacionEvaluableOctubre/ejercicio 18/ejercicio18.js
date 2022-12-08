@@ -10,15 +10,13 @@ document.addEventListener("click", e => {
             if (e.target.value == '1º') {
                 if (primercursoDAW.includes(element.id)) {
                     element.checked = true;
-                }
-                if (segundocursoDAW.includes(element.id)) {
+                }else if (segundocursoDAW.includes(element.id)) {
                     element.checked = false;
                 }
             } else if (e.target.value == '2º') {
                 if (primercursoDAW.includes(element.id)) {
                     element.checked = false;
-                }
-                if (segundocursoDAW.includes(element.id)) {
+                }else if (segundocursoDAW.includes(element.id)) {
                     element.checked = true;
                 }
             }
@@ -26,15 +24,13 @@ document.addEventListener("click", e => {
             if (e.target.value == '1º') {
                 if (primercursoSMR.includes(element.id)) {
                     element.checked = true;
-                }
-                if (segundocursoSMR.includes(element.id)) {
+                }else if (segundocursoSMR.includes(element.id)) {
                     element.checked = false;
                 }
             } else if (e.target.value == '2º') {
                 if (primercursoSMR.includes(element.id)) {
                     element.checked = false;
-                }
-                if (segundocursoSMR.includes(element.id)) {
+                }else if (segundocursoSMR.includes(element.id)) {
                     element.checked = true;
                 }
             }
