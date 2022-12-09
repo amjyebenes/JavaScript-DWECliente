@@ -8,6 +8,7 @@
         width: 50px;
         }
     </style>
+    <link rel="stylesheet" href="ejercicio20.css">
 </head>
 <body>
     <h1>Centro de Reparaciones IES Marqués de Comares</h1>
@@ -17,20 +18,29 @@
             <h2>Solicutud de Reparación</h2>
             <form name="formulario1" action="#" method="get">
                    <label for="apellido1">Apellidos: </label>
-                   <input type="text" name="apellido1" id="apellido1" size="40" maxlength="40">
+                   <input required type="text" name="apellido1" id="apellido1" size="40" maxlength="40">
                    <label for="nombre1">Nombre: </label>
-                   <input type="text" name="nombre1" id="nombre1">
+                   <input required type="text" name="nombre1" id="nombre1">
                    <br/> <br/>
                    <label for="telefono">Teléfono: </label>
-                   <input type="text" name="telefono" id="telefono" size="10" maxlength="9">
+                   <input required type="text" name="telefono" id="telefono" size="10" maxlength="9">
                    <label for="numserire">Nº serie equipo: </label>
-                   <input type="text" name="numserie" id="numserie" size="30" maxlength="30">
+                   <input required type="text" name="numserie" id="numserie" size="30" maxlength="30">
                    <br/> <br/>
                    <label for="clasereparacion">Tipo de reparación: </label>
-                   <input type="radio" name="clasereparacion" value="sobremesa"> Ordenador de sobremesa
-                   <input type="radio" name="clasereparacion" value="portatil"> Ordenador portátil
-                   <input type="radio" name="clasereparacion" value="immpresora"> Impresora
-                   <br/> <br/>
+                   <div id="divradio">
+                        <input required type="radio" name="clasereparacion" value="sobremesa"> Ordenador de sobremesa
+                        <input required type="radio" name="clasereparacion" value="portatil" id="portatil"> Ordenador portátil
+                        <input required type="radio" name="clasereparacion" value="immpresora"> Impresora
+                        <br/> <br/>
+                   </div>
+                   
+                   <div id="campoOculto" class="ocultar">
+                        <label for="">Marca del portatil:</label>
+                        <input type="text" name="marcaportatil"><br><br>
+                        <label for="">Modelo del portatil:</label>
+                        <input type="text" name="modeloportatil"><br><br>
+                   </div>
                       <label for="obtencion1">Antigüedad: </label>
                    <input type="number" name="antiguedad" id="antiguedad" >
                    <br/> <br/>
@@ -40,15 +50,15 @@
                    <option>software</option>
                    </select>
                    <br/> <br/>
-                   <label for="sintomas">Síntoms avería: </label><br>
-                   <input type="checkbox" name="nohacenada" value="nohacenada" id="nohacenada"> No hace nada<br>
-                   <input type="checkbox" name="pitaynoenciende" value="pitaynoenciende" id="pitaynoenciende"> Pita y no enciende<br>
-                   <input type="checkbox" name="arrancayseapaga" value="arrancayseapaga" id="arrancayseapaga"> Arranca pero al rato se apaga<br>
-                   <input type="checkbox" name="novasistemaoperativo" value="novasistemaoperativo" id="novasistemaoperativo"> El sistema operativo no llega a arrancar<br>
-                   <input type="checkbox" name="pantallazoazul" value="pantallazoazul" id="pantallazoazul"> Pantallazo azul<br>
-                   <br/> <br/>
+                   <label for="sintomas">Síntomas avería: </label><br>
+                    <input type="checkbox" name="nohacenada" value="nohacenada" id="nohacenada"> No hace nada<br>
+                    <input type="checkbox" name="pitaynoenciende" value="pitaynoenciende" id="pitaynoenciende"> Pita y no enciende<br>
+                    <input type="checkbox" name="arrancayseapaga" value="arrancayseapaga" id="arrancayseapaga"> Arranca pero al rato se apaga<br>
+                    <input type="checkbox" name="novasistemaoperativo" value="novasistemaoperativo" id="novasistemaoperativo"> El sistema operativo no llega a arrancar<br>
+                    <input type="checkbox" name="pantallazoazul" value="pantallazoazul" id="pantallazoazul"> Pantallazo azul<br>
+                    <br/> <br/>
                    <label for="observaciones1">Observaaciones: </label><br>
-                   <textarea name="observaciones1" id="observaciones1" rows="10" cols="50">Indique si tiene alguna observación que crea importante que debamos conocer...</textarea>
+                   <textarea id="texto" onFocusout="original()" onFocus="cambiarColor()" name="observaciones1" id="observaciones1" rows="10" cols="50">Indique si tiene alguna observación que crea importante que debamos conocer...</textarea>
                    <br/> <br/>
                    <h2>Datos para próximos accesos:</h2><br>
                    <label for="Usuario">Usuario</label>
@@ -56,7 +66,7 @@
                    <label for="Password" >Contraseña:</label>
                    <input type="password" id="password"><br>
                    <p></p>
-                   <input type="submit" value="Enviar" id="Enviar1">
+                   <input disabled type="submit" value="Enviar" id="Enviar">
                    <input type="reset" id="Reset1" value="Limpiar">
                 </form>
     </td>
@@ -64,5 +74,6 @@
    
     </tr>
     </table>
+    <script src="ejercicio20.js"></script>
 </body>
 </html>
