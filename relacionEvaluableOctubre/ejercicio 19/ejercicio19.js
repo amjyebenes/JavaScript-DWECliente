@@ -6,7 +6,7 @@ document.addEventListener("click", e => {
 
     let checkboxs = document.querySelectorAll("input[type=checkbox]");
     checkboxs.forEach(element => {
-        if (e.target.parentNode.parentNode.name == "formulario1" && e.target.parentNode.name =="curso1") {
+        if (e.target.parentNode.name == "curso1") {
             if (e.target.value == '1º') {
                 if (primercursoDAW.includes(element.id)) {
                     element.checked = true;
@@ -22,7 +22,7 @@ document.addEventListener("click", e => {
                     element.checked = true;
                 }
             }
-        } else if (e.target.parentNode.parentNode.name == "formulario2" && e.target.parentNode.name =="curso2") {
+        } else if (e.target.parentNode.name == "curso2") {
             if (e.target.value == '1º') {
                 if (primercursoSMR.includes(element.id)) {
                     element.checked = true;
@@ -39,7 +39,7 @@ document.addEventListener("click", e => {
                 }
             }
         }
-        });
+    });
 })
 
 document.addEventListener("click", function (e) {
@@ -47,19 +47,26 @@ document.addEventListener("click", function (e) {
     let inputs = document.querySelectorAll("input");
     let descripciones = document.querySelectorAll("textarea");
 
-    if(e.target.value=="Enviar"){
+    if (e.target.value == "Enviar") {
         inputs.forEach(element => {
-            if(element.parentNode.name == padre ){
-                if(element.checked || element.type=="text" || element.type=="number" || element.localName == "label" || e.localName == "textarea") {
-                    document.write(element.value,"<br>");
-                }
+            if (element.checked || element.type == "text" || element.type == "number" || element.localName == "label" || e.localName == "textarea") {
+                document.write(element.value, "<br>");
             }
+
         });
-        descripciones.forEach(element =>{
-            if(element.parentNode.name == padre){
-                document.write(element.value);
-            }
+        descripciones.forEach(element => {
+            document.write(element.value);
         })
     }
 })
 
+document.addEventListener("click", function (e) {
+    if (e.target.id == "daw") {
+        document.getElementById("tabladaw").classList.remove("ocultar");
+        document.getElementById("tablasmr").classList.add("ocultar");
+    } else if (e.target.id == "smr") {
+        document.getElementById("tablasmr").classList.remove("ocultar");
+        document.getElementById("tabladaw").classList.add("ocultar");
+    }
+
+})

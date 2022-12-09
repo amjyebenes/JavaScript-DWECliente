@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <title>HTML-Formularios múltiples</title>
+    <style>
+        input[type=number] {
+            width: 50px;
+        }
+    </style>
+    <link rel="stylesheet" href="ejercicio19.css">
+</head>
+
+<body>
+    <h1>Centro Educativo I.E.S. Marqués de Comares</h1>
+
+
+    <table>
+        <tr>
+            <td width="800">
+                <h2>Matriculación en el ciclo de grado superior DAW</h2>
+                <form name="formulario1" action="#" method="get">
+                    <label for="apellido1">Apellidos: </label>
+                    <input type="text" name="apellido1" id="apellido1" size="40" maxlength="40">
+                    <label for="nombre1">Nombre: </label>
+                    <input type="text" name="nombre1" id="nombre1">
+                    <br /> <br />
+                    <label for="especialidad1">Domicilio: </label>
+                    <input type="text" name="domicilio1" id="domicilio1" size="40" maxlength="40">
+                    <br /> <br />
+                    <label for="sexo1">Sexo: </label>
+                    <input type="radio" name="sexo1" value="hombre"> Hombre
+                    <input type="radio" name="sexo1" value="mujer"> Mujer
+                    <br /> <br />
+                    <label for="obtencion1">Edad: </label>
+                    <input type="number" name="edad1" id="edad1">
+                    <br /> <br />
+                    <label>Seleccionar curso:</label>
+                    <select name="curso" id="curso">
+                        <option selected="true"></option>
+                        <option id="daw">Formulario de DAW</option>
+                        <option id="smr">Formulario de SMR</option>
+                    </select>
+                    <br>
+                    <br>
+                    <div class="ocultar" id="tabladaw">
+                        <label for="select1">Curso: </label>
+                        <select name="curso1" id="curso1">
+                            <option>1º</option>
+                            <option>2º</option>
+                        </select>
+                        <br /> <br />
+                        <label for="modulos1">Módulos en que se matricula: </label><br>
+                        <input type="checkbox" name="modulos1" value="APO" id="ED"> Entornos de Desarrollo<br>
+                        <input type="checkbox" name="modulos1" value="BD" id="BD"> Bases de Datos<br>
+                        <input type="checkbox" name="modulos1" value="PROG" id="PROG"> Programación<br>
+                        <input type="checkbox" name="modulos1" value="ISO" id="ISO"> Implantación de sistemas
+                        operativos<br>
+                        <input type="checkbox" name="modulos1" value="FOL1" id="FOL1"> Formación y orientación
+                        laboral<br>
+                        <input type="checkbox" name="modulos1" value="DWEC" id="DWEC"> Desarrollo Web en Entorno
+                        Cliente<br>
+                        <input type="checkbox" name="modulos1" value="DWES" id="DWES"> Desarrollo Web en Entorno
+                        Servidor<br>
+                        <input type="checkbox" name="modulos1" value="DEW" id="DEW"> Despliegue de aplicaciones Web<br>
+                        <input type="checkbox" name="modulos1" value="DIW" id="DIW"> Desarrollo de interfaces Web<br>
+                        <input type="checkbox" name="modulos1" value="EMP1" id="EMP1"> Empresa e iniciativa
+                        emprendedora<br>
+                        <br /> <br />
+                    </div>
+                    <div class="ocultar" id="tablasmr">
+                        <label for="select2">Curso: </label>
+                        <select name="curso2" id="curso2">
+                            <option>1º</option>
+                            <option>2º</option>
+                        </select>
+                        <br /> <br />
+                        <label for="modulos2">Módulos en que se matricula: </label><br>
+                        <input type="checkbox" name="modulos2" value="APO" id="APO"> Aplicaciones Ofimáticas<br>
+                        <input type="checkbox" name="modulos2" value="RL" id="RL"> Redes Locales<br>
+                        <input type="checkbox" name="modulos2" value="SOM" id="SOM"> Sistemas Operativos Monopuesto<br>
+                        <input type="checkbox" name="modulos2" value="MME" id="MME"> Montaje y Mantenimiento de
+                        Equipos<br>
+                        <input type="checkbox" name="modulos2" value="FOL2" id="FOL2"> Formación y orientación
+                        laboral<br>
+                        <input type="checkbox" name="modulos2" value="AW" id="AW"> Aplicaciones Web<br>
+                        <input type="checkbox" name="modulos2" value="SI" id="SI"> Seguridad Informática<br>
+                        <input type="checkbox" name="modulos2" value="SR" id="SR"> Servicios en Red<br>
+                        <input type="checkbox" name="modulos2" value="SOR" id="SOR"> Sistemas Operativos en Red<br>
+                        <input type="checkbox" name="modulos2" value="EMP2" id="EMP2"> Empresa e iniciativa
+                        empresarial<br>
+                        <br /> <br />
+                    </div>
+
+                    <label for="observaciones1">Observaciones: </label><br>
+                    <textarea name="observaciones1" id="observaciones1" rows="10" cols="50"></textarea>
+                    <br /> <br />
+                    <input type="submit" value="Enviar" id="Enviar1">
+                    <input type="reset" id="reset1">
+                </form>
+            </td>
+        </tr>
+    </table>
+    <script src="ejercicio19.js"></script>
+</body>
+
+</html>
