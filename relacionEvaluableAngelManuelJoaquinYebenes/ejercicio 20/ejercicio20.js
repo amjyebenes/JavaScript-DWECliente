@@ -34,10 +34,11 @@ document.addEventListener("change", () =>{
     }
 });
 
-function comprobarContrasena(){
+document.addEventListener("submit", e=>{
     if(/^_\d{3}[A-Z]{1}\w{1}_$/.test(document.getElementById("password1").value)){
         alert("Solicitud enviada correctamente");
     }else{
         alert("Contrasena incorrecta");
+        e.preventDefault();
     }
-}
+})
