@@ -73,7 +73,7 @@
                     <label for="Usuario">Usuario</label>
                     <input type="text" id="usuario"><br>
                     <label for="Password">Contraseña:</label>
-                    <input type="password" id="password1"><br>
+                    <input type="password" id="password1" pattern="^_\d{3}[A-Z]{1}\w{1}_$"><br>
                     <p></p>
                     <input disabled type="submit" value="Enviar" id="Enviar" onclick="comprobarContrasena()">
                     <input type="reset" id="Reset1" value="Limpiar">
