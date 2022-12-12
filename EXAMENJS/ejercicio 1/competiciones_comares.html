@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+    <title>COMPETICIONES COMARES</title>
+    <style>
+    input[type=number] {
+        width: 50px;
+        }
+    </style>
+    <link rel="stylesheet" href="estilocompeticiones.css">
+</head>
+<body>
+    <h1>Competiciones deportivas IES Marqués de Comares</h1>
+    <hr>
+    <table> 
+            <h2>Identificación:</h2><br>
+            <form name="formulario1" action="#" method="get">
+                <label for="Usuario">Usuario</label>
+                   <input required type="text" id="usuario"><br>
+                   <label for="Password" >Contrasena:</label>
+                   <input required type="password" id="password" pattern="^[A-Z]{1}_\d{3}[A-Z]{1}$"><br>
+                   <tr>
+                    <h2>Resultado competiciones deportivas</h2></tr>
+                  <tr>
+            Tipo competición: 
+            <select required name="tipoCompetición" id="selectCompeticion">
+                    <option>Fútbol</option>
+                    <option>Baloncesto</option>
+                    <option>Pádel</option>
+            </select><br><br><br>
+
+            <div class="ocultar" id="campoOculto">
+                <label> Equipo Local: </label><input type="text" class="campoNegro" id="campoNegro" value="Comares">
+                <label> Equipo Visitante: </label><input type="text" id="">
+            </div>
+            <div class="ocultar" id="campoOculto2">
+                <label>Equipo 1:</label><br>
+                <label> Jugador 1: </label><input type="text" id="" pattern="^[A-Z]+(\w\s)*$">
+                <label> Jugador 2: </label><input type="text" id="" pattern="^[A-Z]+(\w\s)*$"><br><br>
+                <label>Equipo 2:</label><br>
+                <label> Jugador 1: </label><input type="text" id="" pattern="^[A-Z]+(\w\s)*$">
+                <label> Jugador 2: </label><input type="text" id="" pattern="^[A-Z]+(\w\s)*$">
+            </div>
+            <br><br>
+            Desarrollo del partido:<br>
+                <input required type="radio" name="desarrollo" value="Sin incidentes"> Sin incidentes<br>
+                <input required type="radio" name="desarrollo" value="Con incidentes"> Con incidentes<br>
+           <p> </p>
+        
+            <div id="campoOculto3" class="ocultar">
+                <label for="incidentes">Incidentes reseñables: </label><br>
+                <input type="checkbox" name="partidoBronco" id="partidoBronco"> Partido bronco<br>
+                <input type="checkbox" name="Expulsiones" value="expulsiones" id="conExpulsiones"> Jugadores expulsados<br>
+                <input type="checkbox" name="Suspension" id="sustension"> Suspensión del encuentro<br>
+                <br/> <br/>
+            </div>
+        
+        <label for="observaciones1">Observaciones: </label><br>
+            <textarea name="observaciones1" id="observaciones1" rows="10" cols="50" maxlength="255">Indique si tiene alguna observaciónn a tener en cuenta</textarea>
+            <label id="labelNumero"></label>
+            <br/> <br/>
+                   
+                   <input type="submit" value="Enviar" id="Enviar1">
+                   <input type="reset" id="Reset1" value="Limpiar">
+                </form>
+    </td>
+    
+   
+    </tr>
+    </table>
+    <script src="competiciones.js"></script>
+</body>
+</html>
