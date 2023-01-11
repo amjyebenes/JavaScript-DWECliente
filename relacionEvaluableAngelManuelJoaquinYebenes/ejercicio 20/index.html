@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+<style>
+  canvas {
+    border: 1px solid black;
+  }
+</style>
+
+<script>
+  // Obtén el contexto del canvas
+  const canvas = document.getElementById('canvas');
+  const ctx = canvas.getContext('2d');
+
+  // Establece las dimensiones del canvas
+  canvas.width = 1200;
+  canvas.height = 500;
+
+  // Crea una pelota con un radio de 10 píxeles y una velocidad inicial de (5, 5)
+  let ball = {
+    x: 50,
+    y: 50,
+    radius: 10,
+    vx: 5,
+    vy: 5,
+  };
+
+  // Dibuja la pelota en la posición actual
+  function drawBall() {
+    ctx.beginPath();
+    ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+    ctx.fillStyle = 'red';
+    ctx.fill();
+    ctx.closePath();
+  }
+
+  // Actualiza la posición de la pelota y hace que rebote en los bordes del canvas
+  function updateBall() {
+    ball.x += ball.vx;
+    ball.y += ball.vy;
+
+    if (ball.x + ball.radius > canvas.width || ball.x - ball.radius < 0) {
+      ball.vx = -ball.vx;
+    }
+
+    if (ball.y + ball.radius > canvas.height || ball.y - ball.radius < 0) {
+      ball.vy = -ball.vy;
+    }
+  }
+
+  // Dibuja la pelota cada 10 milisegundos
+  setInterval(function() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    drawBall();
+    updateBall();
+  }, 10);
+</script>
+
+</body>
+</html>
