@@ -1,54 +1,50 @@
-Proyecto de Empresa: "Acogida Animal"
+Proyecto de Empresa: "StrayPet"
 
 DAFO:
 
-    Fortalezas: Conocimiento y experiencia en el manejo de animales abandonados
-    Oportunidades: Creciente conciencia y preocupación por el bienestar animal
-    Debilidades: Limitada capacidad de financiamiento
-    Amenazas: Competencia de organizaciones no gubernamentales y protectoras de animales existentes
+Fortalezas:
+
+StrayPet utiliza tecnología avanzada para ayudar a los usuarios a encontrar mascotas perdidas o callejeras de manera rápida y eficiente.
+La aplicación fomenta la comunidad y la colaboración entre usuarios, lo que aumenta las posibilidades de encontrar mascotas perdidas.
+StrayPet tiene un fuerte compromiso con la protección animal y puede contar con el apoyo de organizaciones protectoras de animales y refugios.
+Debilidades:
+
+El mercado de las aplicaciones móviles es altamente competitivo, lo que puede dificultar el posicionamiento de StrayPet.
+La aplicación puede requerir un gran esfuerzo de marketing y publicidad para alcanzar una amplia base de usuarios.
+La aplicación depende de la colaboración y el reporte de usuarios para poder funcionar correctamente, lo que puede ser una debilidad si la comunidad no es activa.
+Oportunidades:
+
+El aumento de la conciencia sobre la importancia de la protección animal puede generar una mayor demanda por aplicaciones como StrayPet.
+La creciente popularidad de las aplicaciones móviles puede generar una mayor cantidad de usuarios potenciales para StrayPet.
+StrayPet puede expandir su modelo de negocio a otros países y regiones.
+Amenazas:
+
+La competencia de otras aplicaciones similares en el mercado puede dificultar el éxito de StrayPet.
+Cambios en las políticas de las tiendas de aplicaciones móviles pueden afectar negativamente el rendimiento de StrayPet.
+Eventuales cambios en la tecnología pueden hacer que StrayPet quede obsoleta.
 
 CAME:
 
-    Análisis del mercado: Existe una gran cantidad de animales abandonados en las calles, y cada vez más personas están interesadas en adoptarlos y brindarles un hogar. Además, la conciencia sobre el bienestar animal está aumentando.
-    Análisis de la competencia: Aunque existen otras organizaciones no gubernamentales y protectoras de animales en el mercado, nuestra empresa se diferenciará en su enfoque en la acogida y adopción de animales abandonados de la calle.
-    Análisis de los clientes: Nuestros clientes potenciales serán personas interesadas en adoptar animales abandonados y preocupadas por su bienestar.
-
+Análisis de la competencia: Se debe investigar las aplicaciones similares en el mercado y evaluar su popularidad, funcionalidad y estrategias de marketing.
+Análisis del mercado: Se debe evaluar el tamaño del mercado, las tendencias y las oportunidades para el lanzamiento de StrayPet.
+Análisis del cliente: Se debe investigar las necesidades y preferencias de los usuarios potenciales de StrayPet para desarrollar una estrategia de marketing adecuada.
+Análisis interno: Se deben evaluar los recursos, habilidades y capacidades de la empresa para determinar si son suficientes para el lanzamiento y el desarrollo de StrayPet.
 Canva:
 
-    Misión: Proporcionar un hogar seguro y amoroso para los animales abandonados de la calle, promoviendo su adopción y conciencia sobre el bienestar animal.
-    Visión: Ser la organización líder en la acogida y adopción de animales abandonados en nuestra comunidad.
-    Valores: Compasión, responsabilidad, transparencia, y dedicación al bienestar animal.
+    En el canvas de StrayPet, incluiría los siguientes elementos:
 
-Idea de negocio: Nuestra empresa, "Acogida Animal", se dedicará a la acogida y adopción de animales abandonados de la calle. Ofreceremos servicios de acogida temporal y adopción, así como consejos y recursos para cuidar a los animales adoptados. Además, promoveremos la conciencia sobre el bienestar animal a través de campañas y eventos educativos.
-
-Descripción del emprendedor: El fundador de "Acogida Animal" es un apasionado defensor del bienestar animal con años de experiencia en el manejo y cuidado de animales abandonados. Con una gran cantidad de conocimiento y experiencia en el tema, está decidido a hacer una diferencia en la vida de los animales abandonados en su comunidad.
-
-Objetivos empresariales:
-
-    Aumentar el número de animales adoptados en un 20% en los primeros dos años de operación.
-    Establecer una red de patrocinadores y donantes para financiar nuestras operaciones.
-    Organizar y promover eventos educativos sobre el bienestar
-
----------------------
-
-Proyecto de Empresa: "PetFinder"
-
-Canva:
-
-    En el canvas de PetFinder, incluiría los siguientes elementos:
-
-    Nombre de la empresa: PetFinder
-    Logotipo: Un perro o gato con una marca de lupa superpuesta
+    Nombre de la empresa: StrayPet
+    Logotipo: Un perro o gato con un icono de localización superpuesto
     Colores: Azul y verde (representando la naturaleza y la tecnología)
-    Descripción del producto: PetFinder es una aplicación móvil que permite a los usuarios informar sobre la ubicación de animales perdidos o callejeros y compartir esta información con otros usuarios en la misma área.
+    Descripción del producto: StrayPet es una aplicación móvil que permite a los usuarios informar sobre la ubicación de animales perdidos o callejeros y compartir esta información con otros usuarios en la misma área.
     Público objetivo: Dueños de mascotas, organizaciones protectoras de animales y refugios.
     Beneficios: Ayuda a encontrar mascotas perdidas o callejeras de manera rápida y eficiente, fomenta la comunidad y colaboración entre usuarios, reduce el número de mascotas callejeras.
-    Canales de distribución: Tiendas de aplicaciones móviles para iOS y Android.
+    Canales de distribución: Tiendas de aplicaciones móviles para iOS y Android, como Play Store y Apple Store
     Fuentes de ingresos: Anuncios y patrocinios en la aplicación.
     Costos: Costos de desarrollo y mantenimiento de la aplicación, gastos de publicidad y marketing.
     Metas y objetivos empresariales: Aumentar el número de descargas de la aplicación en los primeros 6 meses después del lanzamiento, lograr una tasa de retención del usuario del 50% en el primer año, alcanzar una base de usuarios activos de 100,000 en el primer año, generar ingresos mediante anuncios y patrocinios.
 
-Este canvas proporciona una visión general de los elementos clave de PetFinder y ayudaría a guiar la estrategia y el desarrollo de la empresa.
+Este canvas proporciona una visión general de los elementos clave de StrayPet y ayudaría a guiar la estrategia y el desarrollo de la empresa.
 
 Misión: Ayudar a los dueños de mascotas a encontrar a sus mascotas perdidas o callejeras mediante la tecnología y la comunidad.
 
@@ -56,9 +52,9 @@ Visión: Ser líderes en tecnología de búsqueda de mascotas y ayudar a reducir
 
 Valores: Compasión, tecnología, comunidad.
 
-Idea de negocio: PetFinder es una aplicación móvil que permite a los usuarios informar sobre la ubicación de animales perdidos o callejeros y compartir esta información con otros usuarios en la misma área. Los usuarios pueden crear alertas para mascotas específicas y recibir notificaciones cuando alguien reporta una mascota que coincide con la descripción. También se incluyen características como la capacidad de marcar mascotas como encontradas y compartir información en redes sociales para ayudar a reunir a las mascotas con sus dueños.
+Idea de negocio: StrayPet es una aplicación móvil que permite a los usuarios informar sobre la ubicación de animales perdidos o callejeros y compartir esta información con otros usuarios en la misma área. Los usuarios pueden crear alertas para mascotas específicas y recibir notificaciones cuando alguien reporta una mascota que coincide con la descripción. También se incluyen características como la capacidad de marcar mascotas como encontradas y compartir información en redes sociales para ayudar a reunir a las mascotas con sus dueños.
 
-Descripción del emprendedor: El fundador de PetFinder es un amante de los animales con experiencia en tecnología y desarrollo de aplicaciones móviles. También tiene un fuerte compromiso con la comunidad y la protección animal.
+Descripción del emprendedor: El fundador de StrayPet es un amante de los animales con experiencia en tecnología y desarrollo de aplicaciones móviles. También tiene un fuerte compromiso con la comunidad y la protección animal.
 
 Objetivos empresariales:
 
@@ -72,20 +68,20 @@ refugios para llegar a una audiencia más amplia.
 
 Macroentorno y microentorno:
 
-    Macroentorno: La tendencia creciente de la tecnología móvil y el interés en la protección animal son factores positivos para el éxito de PetFinder. Sin embargo, la competencia en el mercado de aplicaciones de búsqueda de mascotas puede ser un desafío.
+    Macroentorno: La tendencia creciente de la tecnología móvil y el interés en la protección animal son factores positivos para el éxito de StrayPet. Sin embargo, la competencia en el mercado de aplicaciones de búsqueda de mascotas puede ser un desafío.
    
 
 
-Microentorno: Los competidores directos serán otras aplicaciones similares en el mercado, como "Finding Rover" o "Pet Amber Alert". Sin embargo, PetFinder se diferenciará mediante su enfoque en la comunidad y la colaboración con organizaciones protectoras de animales. Los socios potenciales incluyen refugios, veterinarios y tiendas de mascotas.
+Microentorno: Los competidores directos serán otras aplicaciones similares en el mercado, como "Finding Rover" o "Pet Amber Alert". Sin embargo, StrayPet se diferenciará mediante su enfoque en la comunidad y la colaboración con organizaciones protectoras de animales. Los socios potenciales incluyen refugios, veterinarios y tiendas de mascotas.
 
 Marketing Mix:
 
-    Producto: PetFinder es una aplicación móvil para encontrar mascotas perdidas o callejeras. Incluye características como alertas personalizadas, marcas de mascotas encontradas y compartir información en redes sociales.
+    Producto: StrayPet es una aplicación móvil para encontrar mascotas perdidas o callejeras. Incluye características como alertas personalizadas, marcas de mascotas encontradas y compartir información en redes sociales.
     Precio: La aplicación será gratuita para descargar y utilizar, con ingresos generados a través de anuncios y patrocinios.
     Plaza: La aplicación estará disponible para descargar en las tiendas de aplicaciones móviles para iOS y Android.
     Promoción: Se utilizará publicidad en línea y en medios tradicionales, así como colaboraciones con organizaciones protectoras de animales y refugios para llegar a una audiencia más amplia.
 
-Constitución legal de la empresa: PetFinder sería constituida como una empresa de responsabilidad limitada (LLC) para proteger a los miembros de la empresa de responsabilidad personal.
+Constitución legal de la empresa: StrayPet sería constituida como una empresa de responsabilidad limitada (LLC) para proteger a los miembros de la empresa de responsabilidad personal.
 
 
 
@@ -99,7 +95,7 @@ En cuanto a la estrategia de expansión, se podría considerar expandir la prese
 
 En cuanto a la estrategia de monetización, además de los anuncios y patrocinios mencionados anteriormente, se podrían considerar otras opciones como la venta de accesorios para mascotas o la oferta de servicios premium para usuarios que deseen una experiencia más personalizada y mejorada.
 
-En resumen, PetFinder es una aplicación móvil que busca ayudar a los dueños de mascotas a encontrar a sus mascotas perdidas o callejeras mediante la tecnología y la comunidad. La estrategia de la empresa incluye un enfoque en el marketing y la publicidad, colaboraciones con organizaciones protectoras de animales y refugios, y una estructura legal adecuada. Con un equipo de profesionales y una estrategia sólida, PetFinder tiene el potencial de convertirse en una empresa exitosa en el mercado de aplicaciones de búsqueda de mascotas.
+En resumen, StrayPet es una aplicación móvil que busca ayudar a los dueños de mascotas a encontrar a sus mascotas perdidas o callejeras mediante la tecnología y la comunidad. La estrategia de la empresa incluye un enfoque en el marketing y la publicidad, colaboraciones con organizaciones protectoras de animales y refugios, y una estructura legal adecuada. Con un equipo de profesionales y una estrategia sólida, StrayPet tiene el potencial de convertirse en una empresa exitosa en el mercado de aplicaciones de búsqueda de mascotas.
 
 
 Además, se podrían incluir funciones adicionales como la posibilidad de crear perfiles de mascotas y agregar detalles como fotos, descripciones y características distintivas, lo que ayudaría a los usuarios a identificar a sus mascotas perdidas con mayor precisión. También se podría implementar un sistema de recompensas para los usuarios que ayuden a encontrar mascotas perdidas, lo que incentivaría a la comunidad a participar activamente en la búsqueda de mascotas.
@@ -108,14 +104,14 @@ Además, se podría crear una plataforma de adopción de mascotas, donde los ref
 
 Por último, se podría implementar un sistema de seguimiento de mascotas, donde los usuarios puedan usar un dispositivo especial para monitorear la ubicación de sus mascotas en tiempo real, lo que les daría tranquilidad sabiendo que sus mascotas están seguras.
 
-En resumen, hay muchas formas en las que se podría expandir y mejorar PetFinder, y con el tiempo y el esfuerzo adecuados, podría convertirse en una empresa líder en el mercado de aplicaciones de búsqueda de mascotas.
-Otra característica que podría ser interesante añadir a PetFinder es la posibilidad de crear comunidades locales de usuarios. Esto permitiría a los usuarios compartir información sobre mascotas perdidas o callejeras en su área específica, así como organizar eventos para ayudar a encontrar mascotas perdidas. Esto también ayudaría a fomentar un sentido de comunidad entre los usuarios de PetFinder y aumentaría la efectividad de la aplicación.
+En resumen, hay muchas formas en las que se podría expandir y mejorar StrayPet, y con el tiempo y el esfuerzo adecuados, podría convertirse en una empresa líder en el mercado de aplicaciones de búsqueda de mascotas.
+Otra característica que podría ser interesante añadir a StrayPet es la posibilidad de crear comunidades locales de usuarios. Esto permitiría a los usuarios compartir información sobre mascotas perdidas o callejeras en su área específica, así como organizar eventos para ayudar a encontrar mascotas perdidas. Esto también ayudaría a fomentar un sentido de comunidad entre los usuarios de StrayPet y aumentaría la efectividad de la aplicación.
 
 También se podría implementar un sistema de verificación de informes de mascotas perdidas o callejeras, para asegurar que la información compartida por los usuarios es precisa y confiable. Esto podría incluir la posibilidad de que los usuarios suban pruebas, como fotos o videos, para respaldar sus informes.
 
 En cuanto a la seguridad, se podría incluir un sistema de autenticación de dos factores para proteger la privacidad de los usuarios y garantizar que solo las personas autorizadas tengan acceso a la información de las mascotas perdidas.
 
-En conclusión, PetFinder tiene un gran potencial como una aplicación de búsqueda de mascotas y existen muchas maneras en las que se podría mejorar y expandir su funcionalidad. Con un enfoque en la tecnología, la comunidad y la seguridad, PetFinder podría convertirse en una herramienta valiosa para ayudar a los dueños de mascotas a encontrar a sus mascotas perdidas y al mismo tiempo contribuir a reducir el número de mascotas callejeras.
+En conclusión, StrayPet tiene un gran potencial como una aplicación de búsqueda de mascotas y existen muchas maneras en las que se podría mejorar y expandir su funcionalidad. Con un enfoque en la tecnología, la comunidad y la seguridad, StrayPet podría convertirse en una herramienta valiosa para ayudar a los dueños de mascotas a encontrar a sus mascotas perdidas y al mismo tiempo contribuir a reducir el número de mascotas callejeras.
 
 -----------------------
 POWERPOINT ORGANIZACION
@@ -123,13 +119,13 @@ POWERPOINT ORGANIZACION
 
     Diapositiva 1: Portada con el nombre de la empresa, el logotipo y una breve descripción del producto.
 
-    Diapositiva 2: Descripción detallada del producto, incluyendo características y funcionalidades de PetFinder.
+    Diapositiva 2: Descripción detallada del producto, incluyendo características y funcionalidades de StrayPet.
 
     Diapositiva 3: Público objetivo y segmentación del mercado.
 
-    Diapositiva 4: Beneficios de usar PetFinder.
+    Diapositiva 4: Beneficios de usar StrayPet.
 
-    Diapositiva 5: Canales de distribución y cómo se descarga PetFinder.
+    Diapositiva 5: Canales de distribución y cómo se descarga StrayPet.
 
     Diapositiva 6: Fuentes de ingresos y precios.
 
@@ -141,12 +137,12 @@ POWERPOINT ORGANIZACION
 
     Diapositiva 10: Conclusión y llamado a la acción.
 
-En cada diapositiva, se incluirían gráficos e imágenes adecuadas para ilustrar y complementar la información presentada en el texto. También se podrían incluir videos o pantallas de la aplicación para dar una idea de cómo funciona PetFinder. Es importante que la presentación sea clara, concisa y atractiva para el público objetivo
+En cada diapositiva, se incluirían gráficos e imágenes adecuadas para ilustrar y complementar la información presentada en el texto. También se podrían incluir videos o pantallas de la aplicación para dar una idea de cómo funciona StrayPet. Es importante que la presentación sea clara, concisa y atractiva para el público objetivo
 
 --------------------------
 costos y financiacion
 --------------------------
-Teniendo en cuenta que PetFinder cuenta con un único desarrollador en el equipo de programación, se desarrolla en una casa particular española y que el marketing será encargado a una empresa externa, los costos e ingresos podrían ser los siguientes:
+Teniendo en cuenta que StrayPet cuenta con un único desarrollador en el equipo de programación, se desarrolla en una casa particular española y que el marketing será encargado a una empresa externa, los costos e ingresos podrían ser los siguientes:
 
 Costos:
 
@@ -164,7 +160,7 @@ Ten en cuenta que estos son solo una estimación aproximada de los costos e ingr
 
 Además, debes tener en cuenta que la opción de desarrollar en una casa particular española puede tener algunas implicaciones legales y de cumplimiento que deben ser consideradas. Por ejemplo, es posible que necesites obtener un permiso para usar tu residencia como lugar de trabajo, y debes asegurarte de cumplir con todas las regulaciones locales y nacionales.
 
-En resumen, contratar a un solo desarrollador y desarrollar la aplicación en una casa particular puede ayudar a reducir los costos de desarrollo, pero también puede tener implicaciones legales y de cumplimiento. Es importante tener en cuenta estos factores al hacer proyecciones financieras y planificar el negocio. Además, es importante tener una estrategia sólida de marketing para maximizar la exposición de PetFinder y generar ingresos a través de anuncios y patrocinios.
+En resumen, contratar a un solo desarrollador y desarrollar la aplicación en una casa particular puede ayudar a reducir los costos de desarrollo, pero también puede tener implicaciones legales y de cumplimiento. Es importante tener en cuenta estos factores al hacer proyecciones financieras y planificar el negocio. Además, es importante tener una estrategia sólida de marketing para maximizar la exposición de StrayPet y generar ingresos a través de anuncios y patrocinios.
 
 ----------
 conclusion de los gastos y como he llegado a ellos
@@ -173,7 +169,7 @@ Para llegar al rango de precios mencionado anteriormente, consideré varios fact
 
     El tamaño y la experiencia del equipo de desarrollo: Como se mencionó anteriormente, se consideró que el equipo de desarrollo es de un solo desarrollador, lo que puede reducir los costos de desarrollo en comparación con un equipo más grande.
 
-    El alcance y las características de la aplicación: PetFinder es una aplicación móvil que se centra en la búsqueda de mascotas perdidas y callejeras, por lo que su desarrollo no requiere características y funcionalidades muy complejas.
+    El alcance y las características de la aplicación: StrayPet es una aplicación móvil que se centra en la búsqueda de mascotas perdidas y callejeras, por lo que su desarrollo no requiere características y funcionalidades muy complejas.
 
     Costos de infraestructura y cumplimiento: Al desarrollar la aplicación en una casa particular española, se consideró que los costos de infraestructura serían menores en comparación con alquilar un espacio de trabajo. Sin embargo, es importante tener en cuenta que pueden haber costos adicionales relacionados con el cumplimiento y la regulación.
 
@@ -190,10 +186,10 @@ Para adaptar la información, podrías seguir estos pasos:
 
     Organiza la información en cada sección de acuerdo a lo que te he proporcionado anteriormente.
 
-    Utiliza imágenes, gráficos y videos para ilustrar y complementar la información presentada en el texto. Por ejemplo, puedes incluir capturas de pantalla de PetFinder para mostrar cómo se ve y funciona la aplicación.
+    Utiliza imágenes, gráficos y videos para ilustrar y complementar la información presentada en el texto. Por ejemplo, puedes incluir capturas de pantalla de StrayPet para mostrar cómo se ve y funciona la aplicación.
 
     Utiliza un diseño atractivo y una tipografía legible para hacer que la presentación sea fácil de leer y seguir.
 
-    Asegúrate de incluir un llamado a la acción al final de la presentación, como "Descarga PetFinder ahora" o "Únete a nuestra comunidad de búsqueda de mascotas".
+    Asegúrate de incluir un llamado a la acción al final de la presentación, como "Descarga StrayPet ahora" o "Únete a nuestra comunidad de búsqueda de mascotas".
 
-Con estos pasos, podrás adaptar la información que te he proporcionado sobre PetFinder de manera que sea fácil de presentar al público. Además, te recomendaría que practiques la presentación varias veces antes de presentarla al público, para que te sientas cómodo y seguro con la información y puedas responder cualquier pregunta que pueda surgir. También puedes considerar la posibilidad de contar con un compañero que te ayude en la presentación, por si surgieran dudas o incertidumbres.
+Con estos pasos, podrás adaptar la información que te he proporcionado sobre StrayPet de manera que sea fácil de presentar al público. Además, te recomendaría que practiques la presentación varias veces antes de presentarla al público, para que te sientas cómodo y seguro con la información y puedas responder cualquier pregunta que pueda surgir. También puedes considerar la posibilidad de contar con un compañero que te ayude en la presentación, por si surgieran dudas o incertidumbres.
