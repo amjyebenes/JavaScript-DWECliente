@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIMNASIO PDM</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+
+<body>
+    <h1 class="text-center bg-primary col-3 rounded rounded-3 mt-3 text-white">GIMNASIO PDM</h1>
+    <section class="crud">
+        <div class="d-flex justify-content-center flex-column">
+            <h2 class="crud-titulo text-center col-12 py-3 my-3">Agregar clase</h2>
+            <form class="crud-form align-self-center">
+                <input type="text" name="clase" placeholder="Clase" required>
+                <br>
+                <input type="text" name="profesor" placeholder="Profesor" required>
+                <br>
+                <input type="text" name="hora" placeholder="Hora" required>
+                <br>
+                <input type="submit" value="Enviar">
+                <input type="hidden" name="id">
+            </form>
+        </div>
+        <div class="d-flex justify-content-center flex-column">
+            <h2 class="col-12 text-center py-3 my-3">Clases de la <span id="letrero" class="bg-info rounded rounded-5 p-2">mañana</span>
+                <button class="cambiar btn btn-primary me-2">Cambiar</button></h2>
+            
+            <table class="crud-table table text-center table-hover table-striped table-bordered" border=1>
+                <thead class="table-dark">
+                    <tr>
+                        <th>Clase</th>
+                        <th>Profesor</th>
+                        <th>Hora</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody class="tbody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </section>
+    <template id="crud-template">
+        <tr>
+            <td class="clase fw-bold"></td>
+            <td class="profesor"></td>
+            <td class="hora fw-bold"></td>
+            <td class="col-2">
+                <button class="edit btn btn-primary" id="editar">Editar</button>
+                <button class="delete btn btn-danger" id="borrar">Eliminar</button>
+            </td>
+        </tr>
+    </template>
+    <script src="js/crud_ajax_apirest.js">
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+{
+  "am": [
+    {
+      "id": 1,
+      "clase": "Desayuno",
+      "profesor": "Marisa Lopez",
+      "hora": "9:00"
+    },
+    {
+      "id": 2,
+      "clase": "Zoomba",
+      "profesor": "Marisa Lopez",
+      "hora": "10:00"
+    },
+    {
+      "id": 3,
+      "clase": "Body-combat",
+      "profesor": "Miguel Perea",
+      "hora": "11:00"
+    },
+    {
+      "id": 4,
+      "clase": "Running",
+      "profesor": "Silvia Dominguez",
+      "hora": "12:00"
+    },
+    {
+      "id": 5,
+      "clase": "Gym",
+      "profesor": "Pedro Lopez",
+      "hora": "13:00"
+    }
+  ],
+  "pm": [
+    {
+      "id": 1,
+      "clase": "Gym",
+      "profesor": "Pedro Lopez",
+      "hora": "16:30"
+    },
+    {
+      "id": 2,
+      "clase": "Natacion sincronizada",
+      "profesor": "Marisa Lopez",
+      "hora": "17:30"
+    },
+    {
+      "id": 3,
+      "clase": "Full-combat",
+      "profesor": "Miguel Perea",
+      "hora": "18:30"
+    },
+    {
+      "id": 4,
+      "clase": "Padel",
+      "profesor": "Silvia Dominguez",
+      "hora": "19:30"
+    },
+    {
+      "id": 5,
+      "clase": "Gym",
+      "profesor": "Pedro Lopez",
+      "hora": "20:30"
+    },
+    {
+      "id": 6,
+      "clase": "Yoga",
+      "profesor": "Arturo Perez",
+      "hora": "21:30"
+    }
+  ]
+}
