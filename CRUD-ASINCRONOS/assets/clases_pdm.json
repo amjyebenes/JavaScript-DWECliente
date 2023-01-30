@@ -25,10 +25,10 @@
       "hora": "12:00"
     },
     {
-      "id": 5,
-      "clase": "Gym",
+      "clase": "Zumba",
       "profesor": "Pedro Lopez",
-      "hora": "13:00"
+      "hora": "13:00",
+      "id": 5
     }
   ],
   "pm": [

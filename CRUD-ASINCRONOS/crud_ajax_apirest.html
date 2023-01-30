@@ -4,13 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GIMNASIO PDM</title>
+    <title>CRUD API REST AJAX</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
 </head>
 
 <body class="d-flex justify-content-center flex-column">
-    <h1 class="text-center bg-primary col-2 rounded rounded-5 mt-3 align-self-center text-white">GIMNASIO PDM</h1>
+    <h1 class="text-center bg-primary col-3 rounded rounded-5 mt-3 align-self-center text-white">GIMNASIO PDM AJAX</h1>
+    <a href="crud_axios_apirest.html">
+        <h4 class="text-center "> Ir a AXIOS </h4>
+    </a>
+    <a href="crud_fetch_apirest.html">
+        <h4 class="text-center "> Ir a FETCH </h4>
+    </a>
     <section class="crud">
         <div class="d-flex justify-content-center flex-column">
             <h2 class="crud-titulo text-center col-12 py-3 my-3">Agregar clase</h2>
@@ -26,9 +32,11 @@
             </form>
         </div>
         <div class="d-flex justify-content-center flex-column">
-            <h2 class="col-12 text-center py-3 my-3">Clases de la <span id="letrero" class="bg-info rounded rounded-5 p-2">mañana</span>
-                <button class="cambiar btn btn-primary me-2">Cambiar</button></h2>
-            
+            <h2 class="col-12 text-center py-3 my-3">Clases de la <span id="letrero"
+                    class="bg-info rounded rounded-5 p-2">mañana</span>
+                <button class="cambiar btn btn-primary me-2">Cambiar</button>
+            </h2>
+
             <table class="crud-table table text-center table-hover table-striped table-bordered" border=1>
                 <thead class="table-dark">
                     <tr>
@@ -39,7 +47,7 @@
                     </tr>
                 </thead>
                 <tbody class="tbody">
-                    
+
                 </tbody>
             </table>
         </div>

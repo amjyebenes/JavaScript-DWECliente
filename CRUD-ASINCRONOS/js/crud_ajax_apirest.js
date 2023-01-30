@@ -215,7 +215,7 @@ la estructura básica de cualquier petición, encapsulando todo el código en la
             /*Si el origen del click es el botón editar, cargamos los datos 
             en el formulario, para ello preguntamos si el origen coincide con la clase .edit*/
             if (e.target.matches(".edit")) {
-                $titulo.textContent = "Editar clase de la mañana";
+                $titulo.textContent = "Editar clase";
                 $form.clase.value = e.target.dataset.clase;
                 $form.profesor.value = e.target.dataset.profesor;
                 $form.hora.value = e.target.dataset.hora;

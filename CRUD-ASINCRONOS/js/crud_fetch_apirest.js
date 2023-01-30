@@ -30,7 +30,7 @@ const d = document,
     $titulo = d.querySelector(".crud-titulo"),
     $template = d.getElementById("crud-template").content,
     $fragment = d.createDocumentFragment();
-
+    let     letrero = "am";
 
     /*definición de función asíncrona getAll para utilizar los await
     y tendremos try catch para el manejo de errores */
@@ -41,7 +41,7 @@ const getAll = async () => {
     y una vez obtenida la respuesta a la petición, vamos a asignar a la variable json
     la respuesta con los registros tras ejecutar el método  json de las promesas de 
     la API de fetch */
-        let respuesta = await fetch("http://localhost:5555/primero");
+        let respuesta = await fetch(`http://localhost:5555/${letrero}`);
         let json = await respuesta.json();
 // si el parámetro ok de la respuesta es false, se dispara el error para el catch
         console.log(respuesta);
@@ -55,14 +55,16 @@ const getAll = async () => {
         con el contenido de cada registro que devuelve la variable json, para lo cual
         nos basaremos en las clases creadas en el documento HTML */
         json.forEach((el) => {
-            $template.querySelector(".modulo").textContent = el.modulo;
+            $template.querySelector(".clase").textContent = el.clase;
             $template.querySelector(".profesor").textContent = el.profesor;
+            $template.querySelector(".hora").textContent = el.hora;
             /* creamos un data-atribute (dataset) para asignarle los datos correspondientes
                y así poder editar después el contenido de los registros en el formulario, de
                esta forma el mismo formulario me sirve para editar o dar de alta */
             $template.querySelector(".edit").dataset.id = el.id;
-            $template.querySelector(".edit").dataset.modulo = el.modulo;
+            $template.querySelector(".edit").dataset.clase = el.clase;
             $template.querySelector(".edit").dataset.profesor = el.profesor;
+            $template.querySelector(".edit").dataset.hora = el.hora;
             $template.querySelector(".delete").dataset.id = el.id;
 /* creación de la variable clone para importar el nodo con el segundo parámetro a true
 para que cree lo importe con el contenido porque si fuera false lo crearía vacío,
@@ -110,14 +112,15 @@ d.addEventListener("submit", async (e) => {
                         headers: {"Content-type": "application/json; charset=utf-8"},
                         // cuerpo con el objeto json convertido a cadena gracias al método stringify
                         body: JSON.stringify({
-                            modulo: e.target.modulo.value,
+                            clase: e.target.clase.value,
                             profesor: e.target.profesor.value,
+                            hora: e.target.hora.value,
                         }),
                     },
                     /* variable respuesta para obtener la peticion json con la variable
                     options como parámetro, es decir, las opciones para fetch se le pasan
                     con el objeto options */
-                    respuesta = await fetch("http://localhost:5555/primero", options),
+                    respuesta = await fetch(`http://localhost:5555/${letrero}`, options),
                     json = await respuesta.json();
                 // en caso de que el parámetro ok venga a false disparamos error
                 if (!respuesta.ok) throw {
@@ -142,13 +145,14 @@ d.addEventListener("submit", async (e) => {
                         method: "PUT",
                         headers: {"Content-type": "application/json; charset=utf-8"},
                         body: JSON.stringify({
-                            modulo: e.target.modulo.value,
+                            clase: e.target.clase.value,
                             profesor: e.target.profesor.value,
+                            hora: e.target.hora.value,
                         }),
                     },
                     // obtenemos la respuesta y esperamos a que se obtenga con away
                     respuesta = await fetch(
-                        `http://localhost:5555/primero/${e.target.id.value}`,
+                        `http://localhost:5555/${letrero}/${e.target.id.value}`,
                         options
                     ),
                     json = await respuesta.json();
@@ -168,8 +172,9 @@ d.addEventListener("submit", async (e) => {
             }
         }
         //resetear los campos del formulario una vez editado un registro
-        $form.modulo.value=null;
+        $form.clase.value=null;
         $form.profesor.value=null;
+        $form.hora.value=null;
         $form.id.value=null;
     }
 });
@@ -177,9 +182,10 @@ d.addEventListener("submit", async (e) => {
 // idéntico a lo que hicimos en el crud_ajax
 d.addEventListener("click", async (e) => {
     if (e.target.matches(".edit")) {
-        $titulo.textContent = "Editar Módulo Primero";
-        $form.modulo.value = e.target.dataset.modulo;
+        $titulo.textContent = "Editar clase";
+        $form.clase.value = e.target.dataset.clase;
         $form.profesor.value = e.target.dataset.profesor;
+        $form.hora.value = e.target.dataset.hora;
         $form.id.value = e.target.dataset.id;
     }
 
@@ -195,7 +201,7 @@ d.addEventListener("click", async (e) => {
                         method: "DELETE",
                         headers: {"Content-type": "application/json; charset=utf-8"},
                         },
-                    respuesta = await fetch(`http://localhost:5555/primero/${e.target.dataset.id}`,options );
+                    respuesta = await fetch(`http://localhost:5555/${letrero}/${e.target.dataset.id}`,options );
                     json = await respuesta.json();
 
                 if (!respuesta.ok) throw {
@@ -211,3 +217,26 @@ d.addEventListener("click", async (e) => {
         }
     }
 });
+
+
+document.addEventListener("click", (e) => {
+    if (e.target.matches(".cambiar")) {
+        if (d.getElementById("letrero").innerHTML == "mañana") {
+            letrero = "pm";
+            d.getElementById("letrero").innerHTML = "tarde";
+        } else {
+            letrero = "am";
+            d.getElementById("letrero").innerHTML = "mañana";
+        }
+        deleteAll();
+        getAll();
+    }
+});
+
+const deleteAll = () => {
+    let tabla = document.querySelector(".tbody");
+    tabla.remove();
+    let cuerpo = document.createElement("tbody");
+    cuerpo.classList.add("tbody");
+    document.querySelector(".crud-table").appendChild(cuerpo);
+};

@@ -1,6 +1,6 @@
 /* 
 Para usar jsonPlaceholder como una API REST falsa para simular el funcionamiento de una BD,
-lo primero que debemos de tener es nodejs, por tanto, habrá que seguir los pasos:
+lo am que debemos de tener es nodejs, por tanto, habrá que seguir los pasos:
 1) Visitar nodejs.org y descargar la versión que deseemmos o necesitemos
 2) Instalar nodejs que hemos descargado
 3) Podemos comprobar si se ha instalado bien desde el terminal de windows o del de Visual Studio Code con node -v 
@@ -20,20 +20,22 @@ const d = document,
     $titulo = d.querySelector(".crud-titulo"),
     $template = d.getElementById("crud-template").content,
     $fragment = d.createDocumentFragment();
-
+    let     letrero = "am";
 const getAll = async () => {
     try {
-        let respuesta = await axios.get("http://localhost:5555/primero"),
+        let respuesta = await axios.get(`http://localhost:5555/${letrero}`),
             json = await respuesta.data;
 
         console.log(json);
 
         json.forEach((el) => {
-            $template.querySelector(".modulo").textContent = el.modulo;
+            $template.querySelector(".clase").textContent = el.clase;
             $template.querySelector(".profesor").textContent = el.profesor;
+            $template.querySelector(".hora").textContent = el.hora;
             $template.querySelector(".edit").dataset.id = el.id;
-            $template.querySelector(".edit").dataset.modulo = el.modulo;
+            $template.querySelector(".edit").dataset.clase = el.clase;
             $template.querySelector(".edit").dataset.profesor = el.profesor;
+            $template.querySelector(".edit").dataset.hora = el.hora;
             $template.querySelector(".delete").dataset.id = el.id;
 
             let $clone = d.importNode($template, true);
@@ -63,11 +65,12 @@ d.addEventListener("submit", async (e) => {
                         method: "POST",
                         headers: {"Content-type": "application/json; charset=utf-8"},
                         data: JSON.stringify({
-                            modulo: e.target.modulo.value,
+                            clase: e.target.clase.value,
                             profesor: e.target.profesor.value,
+                            hora: e.target.hora.value,
                             })
                         };
-                let respuesta = await axios("http://localhost:5555/primero", options);
+                let respuesta = await axios(`http://localhost:5555/${letrero}`, options);
                 let json = await respuesta.data;
 
                 location.reload();
@@ -85,11 +88,12 @@ d.addEventListener("submit", async (e) => {
                         method: "PUT",
                         headers: {"Content-type": "application/json; charset=utf-8"},
                         data: JSON.stringify({
-                            modulo: e.target.modulo.value,
+                            clase: e.target.clase.value,
                             profesor: e.target.profesor.value,
+                            hora: e.target.hora.value,
                             }),
                         };
-                    let respuesta = await axios(`http://localhost:5555/primero/${e.target.id.value}`,options );
+                    let respuesta = await axios(`http://localhost:5555/${letrero}/${e.target.id.value}`,options );
                     let json = await respuesta.data;
 
                 location.reload();
@@ -102,17 +106,19 @@ d.addEventListener("submit", async (e) => {
             }
         }
          //resetear los campos del formulario una vez editado un registro
-         $form.modulo.value=null;
+         $form.clase.value=null;
          $form.profesor.value=null;
+         $form.hora.value=null;
          $form.id.value=null;
     }
 });
 
 d.addEventListener("click", async (e) => {
     if (e.target.matches(".edit")) {
-        $titulo.textContent = "Editar Santo";
-        $form.modulo.value = e.target.dataset.modulo;
+        $titulo.textContent = "Editar Clase";
+        $form.clase.value = e.target.dataset.clase;
         $form.profesor.value = e.target.dataset.profesor;
+        $form.hora.value = e.target.dataset.hora;
         $form.id.value = e.target.dataset.id;
     }
 
@@ -128,7 +134,7 @@ d.addEventListener("click", async (e) => {
                         method: "DELETE",
                         headers: {"Content-type": "application/json; charset=utf-8"},
                         };
-                    let respuesta = await axios(`http://localhost:5555/primero/${e.target.dataset.id}`,options);
+                    let respuesta = await axios(`http://localhost:5555/${letrero}/${e.target.dataset.id}`,options);
                     let json = await respuesta.data;
 
                 location.reload();
@@ -139,3 +145,25 @@ d.addEventListener("click", async (e) => {
         }
     }
 });
+
+document.addEventListener("click", (e) => {
+    if (e.target.matches(".cambiar")) {
+        if (d.getElementById("letrero").innerHTML == "mañana") {
+            letrero = "pm";
+            d.getElementById("letrero").innerHTML = "tarde";
+        } else {
+            letrero = "am";
+            d.getElementById("letrero").innerHTML = "mañana";
+        }
+        deleteAll();
+        getAll();
+    }
+});
+
+const deleteAll = () => {
+    let tabla = document.querySelector(".tbody");
+    tabla.remove();
+    let cuerpo = document.createElement("tbody");
+    cuerpo.classList.add("tbody");
+    document.querySelector(".crud-table").appendChild(cuerpo);
+};
